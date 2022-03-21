@@ -12,7 +12,7 @@ class TestIpgeobase < Minitest::Test
       lon: 28.745
     }
     @ip = "www.example.com"
-    fixture = File.open("../test/fixtures/fixture.xml", "r")
+    fixture = File.open("./test/fixtures/fixture.xml", "r")
     stub_request(
       :get, "http://ip-api.com/xml/www.example.com"
     ).to_return(status: 200, body: fixture, headers: {})
