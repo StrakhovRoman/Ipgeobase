@@ -1,7 +1,11 @@
 # Ipgeobase
 
-Gem returns IP metadata. 
-
+Return IP metadata. 
+***
+[![Maintainability](https://api.codeclimate.com/v1/badges/b90df6fed50187ed898d/maintainability)](https://codeclimate.com/github/StrakhovRoman/Ipgeobase/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b90df6fed50187ed898d/test_coverage)](https://codeclimate.com/github/StrakhovRoman/Ipgeobase/test_coverage)
+[![CI](https://github.com/StrakhovRoman/Ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/StrakhovRoman/Ipgeobase/actions/workflows/main.yml)
+***
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -29,8 +33,3 @@ ip.lat # 39.03
 ip.lon # -77.5
 ```
 
-***
-[![Maintainability](https://api.codeclimate.com/v1/badges/b90df6fed50187ed898d/maintainability)](https://codeclimate.com/github/StrakhovRoman/Ipgeobase/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/b90df6fed50187ed898d/test_coverage)](https://codeclimate.com/github/StrakhovRoman/Ipgeobase/test_coverage)
-[![CI](https://github.com/StrakhovRoman/Ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/StrakhovRoman/Ipgeobase/actions/workflows/main.yml)
-***
