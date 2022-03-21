@@ -1,6 +1,6 @@
 # Ipgeobase
 
-Return IP metadata. 
+Gem returns IP metadata. 
 
 ## Installation
 
