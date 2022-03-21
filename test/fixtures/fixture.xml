@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+  <status>success</status>
+  <country>Russia</country>
+  <countryCode>RU</countryCode>
+  <region>LEN</region>
+  <regionName>Leningrad Oblast</regionName>
+  <city>Vyborg</city>
+  <zip>188556</zip>
+  <lat>60.7142</lat>
+  <lon>28.745</lon>
+  <timezone>Europe/Moscow</timezone>
+  <isp>Rostelecom networks</isp>
+  <org>OJSC North-West Telecom</org>
+  <as>AS12389 PJSC Rostelecom</as>
+  <query>95.55.77.168</query>
+</query>
