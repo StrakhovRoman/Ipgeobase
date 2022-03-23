@@ -13,7 +13,7 @@ class TestIpgeobase < Minitest::Test
     }
 
     @url = "www.example.com"
-    api_base_path = Ipgeobase::Api::BASE_PATH
+    api_base_path = Ipgeobase::BASE_PATH
     api_response = File.open("./test/fixtures/files/response.xml", "r")
 
     stub_request(

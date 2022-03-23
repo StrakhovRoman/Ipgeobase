@@ -9,8 +9,7 @@ require "net/http"
 # Main module
 module Ipgeobase
   def self.lookup(ip)
-    api_base_path = Api::BASE_PATH
-    uri = Addressable::URI.parse("#{api_base_path}#{ip}")
+    uri = Addressable::URI.parse("#{BASE_PATH}#{ip}")
     response = Net::HTTP.get_response(uri.normalize)
     MetaData.parse(response.body, single: true)
   end
