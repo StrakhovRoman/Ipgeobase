@@ -1,27 +1,16 @@
 # frozen_string_literal: true
 
 require_relative "ipgeobase/version"
+require_relative "ipgeobase/metadata"
+require_relative "ipgeobase/api"
 require "addressable/uri"
 require "net/http"
-require "happymapper"
 
 # Main module
 module Ipgeobase
-  class Error < StandardError; end
-
-  class MetaData
-    include HappyMapper
-
-    tag "query"
-    element :city, String
-    element :country, String
-    element :countryCode, String
-    element :lat, Float
-    element :lon, Float
-  end
-
   def self.lookup(ip)
-    uri = Addressable::URI.parse("http://ip-api.com/xml/#{ip}")
+    api_base_path = Api::BASE_PATH
+    uri = Addressable::URI.parse("#{api_base_path}#{ip}")
     response = Net::HTTP.get_response(uri.normalize)
     MetaData.parse(response.body, single: true)
   end

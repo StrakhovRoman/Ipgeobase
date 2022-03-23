@@ -11,15 +11,18 @@ class TestIpgeobase < Minitest::Test
       lat: 60.7142,
       lon: 28.745
     }
-    @ip = "www.example.com"
-    fixture = File.open("./test/fixtures/fixture.xml", "r")
+
+    @url = "www.example.com"
+    api_base_path = Ipgeobase::Api::BASE_PATH
+    api_response = File.open("./test/fixtures/files/response.xml", "r")
+
     stub_request(
-      :get, "http://ip-api.com/xml/www.example.com"
-    ).to_return(status: 200, body: fixture, headers: {})
+      :get, "#{api_base_path}#{@url}"
+    ).to_return(status: 200, body: api_response, headers: {})
   end
 
   def test_lookup
-    ip_meta = Ipgeobase.lookup(@ip)
+    ip_meta = Ipgeobase.lookup(@url)
     assert_equal(@expected_fields[:city], ip_meta.city)
     assert_equal(@expected_fields[:country], ip_meta.country)
     assert_equal(@expected_fields[:countryCode], ip_meta.countryCode)
