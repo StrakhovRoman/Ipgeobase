@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-```Ruby
+```ruby
 ip_meta = Ipgeobase.lookup('8.8.8.8')
 ip_meta.city # Ashburn
 ip_meta.country # United States
