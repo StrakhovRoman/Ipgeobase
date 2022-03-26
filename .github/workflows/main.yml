@@ -23,5 +23,9 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-    - name: Run the default task
-      run: bundle exec rake
+    - name: Test coverage
+      uses: paambaati/codeclimate-action@v3.0.0
+      env:
+        CC_TEST_REPORTER_ID: b43fb5a7e21a8d2e2d6fc1d7af81333cb53a0ddd44d7ad6b50d1f11a6fbe46cd
+      with:
+        coverageCommand: bundle exec rake

@@ -18,3 +18,5 @@ gem "nokogiri-happymapper"
 group :test do
   gem "webmock"
 end
+
+gem "simplecov", require: false, group: :test
